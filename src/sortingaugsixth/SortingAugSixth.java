@@ -1,7 +1,5 @@
 package sortingaugsixth;
 
-import java.util.Arrays;
-
 public class SortingAugSixth {
 
     public static void main(String[] args) {
@@ -9,7 +7,9 @@ public class SortingAugSixth {
         bubbleSort(a);
         bubbleSortOptimized(a);
         bubbleSortOptimized2(a);
-        System.out.println(Arrays.toString(insertSort(a)));
+        insertSort(a);
+        selectionSort(a);
+        
     }
     
     
@@ -95,6 +95,24 @@ public class SortingAugSixth {
                 a[j] = a[iMin];
                 a[iMin] = temp;
             }
+        }
+        System.out.println("Steps: " + steps);
+        return a;
+    }
+    
+    public static int[] selectionSort(int[] a){
+        int steps = 0;
+        for (int i = 0; i < a.length - 1; i++)
+        {
+            int index = i;
+            for (int j = i + 1; j < a.length; j++){
+                if (a[j] < a[index]) 
+                    index = j;
+                steps++;
+            }
+            int smallerNumber = a[index];  
+            a[index] = a[i];
+            a[i] = smallerNumber;
         }
         System.out.println("Steps: " + steps);
         return a;
