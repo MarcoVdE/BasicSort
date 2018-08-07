@@ -18,7 +18,7 @@ data set movement/full iterations is 6. (length - 1)
 Each pass largest number will be on rightmost side. -> https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif
 
 a = [i,i+1, ..., n-2, n-1]
-
+```
 //then repeat for all of them
 for(int j = 0; j < a.length - 1; j++){ //you will always have the largest item be at the end.
 	//comparison for each first coded
@@ -30,6 +30,7 @@ for(int j = 0; j < a.length - 1; j++){ //you will always have the largest item b
 		}
 	}
 }
+```
 
 //worst case: O(n^2) -> due to double loop. Comparisons and swaps
 //best case: O(n) comparisons. O(1) swaps
